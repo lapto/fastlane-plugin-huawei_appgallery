@@ -6,9 +6,9 @@ module Fastlane
     class HuaweiAppgalleryAction < Action
       def self.run(params)
         cookie = Helper::HuaweiAppgalleryHelper.request_cookie(params[:client_id], params[:time], params[:signature])
-        Helper::HuaweiAppgalleryHelper.update_release_notes(cookie, params[:app_id], params[:release_notes])
+        #Helper::HuaweiAppgalleryHelper.update_release_notes(cookie, params[:app_id], params[:release_notes])
         Helper::HuaweiAppgalleryHelper.upload_apk(cookie, params[:app_id], params[:apk_path])
-        Helper::HuaweiAppgalleryHelper.submit_app(cookie, params[:app_id])
+        #Helper::HuaweiAppgalleryHelper.submit_app(cookie, params[:app_id])
         UI.message('Finished!')
       end
 
