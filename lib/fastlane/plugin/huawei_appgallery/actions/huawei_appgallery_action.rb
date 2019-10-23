@@ -58,7 +58,7 @@ module Fastlane
           FastlaneCore::ConfigItem.new(key: :release_notes,
                                   env_name: "HUAWEI_APPGALLERY_RELEASE_NOTES",
                                description: "Dictionary with language codes as the keys and the release notes as the values",
-                                  optional: false,
+                                  optional: true,
                                       type: Hash)
         ]
       end
