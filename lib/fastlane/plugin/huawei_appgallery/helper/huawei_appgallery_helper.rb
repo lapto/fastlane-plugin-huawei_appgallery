@@ -8,6 +8,7 @@ module Fastlane
       def self.request_cookie(client_id, time, signature)
         UI.message("Requesting cookie from Huawei AppGallery ...")
         content = { 'key_string' => { 'clientId' => client_id, 'time' => time, 'sign' => signature } }
+        UI.message("Content #{content}")
         result = Net::HTTP.post(
           URI('https://connect-api.cloud.huawei.com/api/common/v1/connect'),
           content.to_json.encode('utf-8'),
